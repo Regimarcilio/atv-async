@@ -7,11 +7,11 @@ function buscarProduto(codigo) {
         103: { codigo: 103, nome: "Monitor", preco: 899.90 }
       };
 
-      const produto = produtos[codigo];
-
+    const produto = produtos[codigo];
+      console.log('Consultando Produto...');
       if (produto) {
         resolve(produto);
-      } else {
+        } else {
         reject(new Error("Produto não encontrado."));
       }
     }, 1500);
@@ -29,4 +29,4 @@ async function exibirProduto(codigo) {
   }
 }
 
-exibirProduto(102);
+exibirProduto(101); 
